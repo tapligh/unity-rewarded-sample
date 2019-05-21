@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.tapligh.sdk" android:versionCode="1" android:versionName="3.0.9" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <application>
+	    <activity android:name="com.tapligh.sdk.adview.TaplighUnity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+      <activity android:name="com.tapligh.sdk.adview.ADView" android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+      <receiver android:name="com.tapligh.sdk.adview.ADsReceiver">
+        <intent-filter android:priority="999">
+          <action android:name="android.intent.action.PACKAGE_ADDED" />
+          <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+          <data android:scheme="package" />
+        </intent-filter>
+      </receiver>
+      
+    </application>
+
+</manifest>
