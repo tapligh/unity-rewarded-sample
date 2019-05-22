@@ -36,6 +36,7 @@ public class Controller : MonoBehaviour {
     public void LoadAdByUnits(string unit_name)
     {
         string code = GetUnitCode(unit_name);
+        Debug.Log(code);
         if (code != null)
         {
             Tapligh.Reward.OnAdListener = OnAdResult;
