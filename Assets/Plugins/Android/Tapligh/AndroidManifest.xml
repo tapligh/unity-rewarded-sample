@@ -8,7 +8,10 @@
     <application>
 	    <activity android:name="com.tapligh.sdk.adview.TaplighUnity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
       <activity android:name="com.tapligh.sdk.adview.ADView" android:theme="@android:style/Theme.Light.NoTitleBar" />
-
+	        <activity
+            android:name="com.tapligh.sdk.ADView.ADView"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|uiMode"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
       <receiver android:name="com.tapligh.sdk.adview.ADsReceiver">
         <intent-filter android:priority="999">
           <action android:name="android.intent.action.PACKAGE_ADDED" />
