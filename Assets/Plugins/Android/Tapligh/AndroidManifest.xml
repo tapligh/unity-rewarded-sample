@@ -7,17 +7,15 @@
 
     <application>
 	    <activity android:name="com.tapligh.sdk.adview.TaplighUnity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-      <activity android:name="com.tapligh.sdk.adview.ADView" android:theme="@android:style/Theme.Light.NoTitleBar" />
+      <activity android:name="com.tapligh.sdk.adview.ADView" android:configChanges="orientation|screenSize|keyboardHidden" android:theme="@android:style/Theme.Light.NoTitleBar" />
 
       <receiver android:name="com.tapligh.sdk.adview.ADsReceiver">
         <intent-filter android:priority="999">
           <action android:name="android.intent.action.PACKAGE_ADDED" />
           <action android:name="android.intent.action.PACKAGE_REMOVED" />
-
           <data android:scheme="package" />
         </intent-filter>
       </receiver>
-      
     </application>
 
 </manifest>
